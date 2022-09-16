@@ -1,22 +1,39 @@
-html, body {
-  width: 100%;
-  height:100%;
+/*
+    HTML VIDEO AS BACKGROUND:
+    I updated code from Dudley Storey  
+*/
+.twp-video-background {
+    background: #000;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box; 
+}
+.twp-video-foreground,
+.twp-video-background video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+    object-fit: cover; 
 }
 
-body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+.twp-video-foreground{
+    padding-bottom: 56.25%;
+    box-sizing: border-box; 
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.twp-video-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0.5;
+    box-sizing: border-box; 
 }
